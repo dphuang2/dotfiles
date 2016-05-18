@@ -10,6 +10,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'
 " Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
 Plugin 'Solarized'
+" Airline
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,34 +28,29 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" Toggle BG in gVim
-call togglebg#map("<F5>")
-
-" Automatically start NERDTree and map Ctrl+N to Nerd Tree
+" Automatically start NERDTree
 autocmd vimenter * NERDTree
+" Map Ctrl+N to Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
-" 256 colors and utf8 working in vim
-function Set-CodePage
-{
-    [CmdletBinding()]
-    param(
-        [ValidateSet("UTF8", "Default")]
-        [string]$CodePage
-    )
+syntax enable                   " Enable syntax highlighting
 
-    $codePageToNum = @{
-        UTF8 = 65001;
-        Default = 437;
-    }
+set hlsearch                    " Highlight search results
+set incsearch                   " Jump to search results as you type
 
-    chcp $codePageToNum[$CodePage] | Out-Null
-}
+set softtabstop=4               " 4-space tabs
+set shiftwidth=4
+set expandtab
+set autoindent
 
-if(Test-Path Env:ConEmuBuild)
-{
-    Set-CodePage UTF8
-}
+" Goodies
+set number                      " Show line numbers
+set cursorline                  " Highlight line cursor is on
+
+syntax enable
+set background=dark
+colorscheme solarized
+" _________________________________FOR GVIM__________________________________
 
 if has("gui_running")
   if has("gui_gtk2")
@@ -68,20 +65,3 @@ endif
 :set guioptions-=L  "remove left-hand scroll bar
 :set guioptions-=m
 :set guioptions-=T
-
-syntax enable                   " Enable syntax highlighting
-
-set hlsearch                    " Highlight search results
-set incsearch                   " Jump to search results as you type
-
-set softtabstop=4               " 4-space tabs
-set shiftwidth=4
-set expandtab
-
-" Goodies
-set number                      " Show line numbers
-set cursorline                  " Highlight line cursor is on
-
-syntax enable
-set background=dark
-colorscheme solarized
