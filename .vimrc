@@ -10,23 +10,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'
 " Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
 Plugin 'Solarized'
+" zenburn
+Plugin 'zenburn'
 " Airline
 Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 " Automatically start NERDTree
 autocmd vimenter * NERDTree
@@ -41,15 +32,20 @@ set incsearch                   " Jump to search results as you type
 set softtabstop=4               " 4-space tabs
 set shiftwidth=4
 set expandtab
-set autoindent
+set autoindent			" auto indent
 
-" Goodies
 set number                      " Show line numbers
 set cursorline                  " Highlight line cursor is on
 
-syntax enable
-set background=dark
-colorscheme solarized
+syntax enable			" enable language syntax
+
+if !has("gui_running")
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+    colorscheme zenburn
+endif
 " _________________________________FOR GVIM__________________________________
 
 if has("gui_running")
