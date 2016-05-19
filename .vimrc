@@ -56,6 +56,7 @@ if has("gui_running")
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
+  colorscheme solarized
 endif
 
 :set guioptions-=L  "remove left-hand scroll bar
