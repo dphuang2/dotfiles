@@ -19,13 +19,13 @@ Plugin 'zenburn'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-________________________________________________________AFTER PLUGINS_______________________________________________
+" ________________________________________________________AFTER PLUGINS_______________________________________________
 
 " Automatically start NERDTree
 autocmd vimenter * NERDTree
 " Map Ctrl+N to Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
-" Keep Airline from disappearing when NERDTree is gone / Keep cursor from flailing when scrolling
+" Keep Airline from disappearing when NERDTree is gone
 set laststatus=2
 
 syntax enable                   " Enable syntax highlighting
