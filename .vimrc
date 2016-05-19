@@ -8,21 +8,25 @@ call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 " A tree explorer plugin for navigating the filesystem
 Plugin 'The-NERD-tree'
+" Airline
+Plugin 'vim-airline/vim-airline'
 " Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
 Plugin 'Solarized'
 " zenburn
 Plugin 'zenburn'
-" Airline
-Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+________________________________________________________AFTER PLUGINS_______________________________________________
+
 " Automatically start NERDTree
 autocmd vimenter * NERDTree
 " Map Ctrl+N to Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
+" Keep Airline from disappearing when NERDTree is gone / Keep cursor from flailing when scrolling
+set laststatus=2
 
 syntax enable                   " Enable syntax highlighting
 
