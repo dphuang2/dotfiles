@@ -28,6 +28,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Keep Airline from disappearing when NERDTree is gone
 set laststatus=2
 
+" Make backspace work properly
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
+
 syntax enable                   " Enable syntax highlighting
 
 set hlsearch                    " Highlight search results

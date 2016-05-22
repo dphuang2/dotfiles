@@ -11,3 +11,10 @@
     <li> Copy and paste dotfile into %USERPROFILE% directory </li>
     <li> Run Vim from ConEmu and :PluginInstall! </li>
 </ol>    
+
+
+<h3> Rails Notes </h3>
+
+<ul>
+    <li>must "gem intall rails" to install rails</li>
+</ul>
