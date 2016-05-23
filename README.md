@@ -17,4 +17,18 @@
 
 <ul>
     <li>must "gem intall rails" to install rails</li>
+    <li>bundler install: "gem install bundler" </li>
 </ul>
+
+<h3> IM Setup </h3>
+
+<ol>
+    <li> Download RailsInstaller (Ruby 2.2.4 version) </li>
+    <li> Clone from github: https://github.com/berkmancenter/internet_monitor.git </li>
+    <li> Gemfile specifies ruby version 2.1.6 so need to change to 2.2.4 </li>
+    <li> Run bundle install </li>
+    <li> Run rails server </li>
+    <ul>
+        <li> config/database.yml is missing </li>
+    </ul>
+</ol>
