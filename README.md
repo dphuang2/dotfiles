@@ -3,12 +3,13 @@
     <li> Install vim, ConEmu, and mysgit </li>
     <li> Install Vundle by cloning into %USERPROFILE%/vimfiles/bundle/Vundle.vim </li>
     https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
-    Gonna have to use this command (also outlined in link):
+    Gonna have to use this command (explained in link):
     <ul>
-        <li> Gonna have to git clone https://github.com/gmarik/Vundle.vim.git %USERPROFILE%/vimfiles/bundle/Vundle.vim </li>
+        <li>git clone https://github.com/gmarik/Vundle.vim.git %USERPROFILE%/vimfiles/bundle/Vundle.vim </li>
     </ul> 
-    <li> Clone dotfile from github </li>
+    <li> Clone dotfiles from github </li>
     <li> Copy and paste dotfile into %USERPROFILE% directory </li>
+    <li> Open ConEmu and import settings </li>
     <li> Run Vim from ConEmu and :PluginInstall! </li>
 </ol>    
 
@@ -18,6 +19,9 @@
 <ul>
     <li>must "gem intall rails" to install rails</li>
     <li>bundler install: "gem install bundler" </li>
+    <li> coffeescript doesn't work on windows so include this in Gemfile for every new rails project: gem 'coffee-script-source', '1.8.0' and run: bundle update coffee-script-source </li>
+    <b> This is done to for coffeescript to older version that works for Windows </b>
+    Solution explained: http://stackoverflow.com/a/28331807
 </ul>
 
 <h3> IM Setup </h3>
@@ -29,6 +33,6 @@
     <li> Run bundle install </li>
     <li> Run rails server </li>
     <ul>
-        <li> config/database.yml is missing </li>
+        <li> config/database.yml is missing (because it is included in .gitignore) </li>
     </ul>
 </ol>

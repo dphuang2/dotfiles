@@ -11,7 +11,7 @@ Plugin 'The-NERD-tree'
 " Airline
 Plugin 'vim-airline/vim-airline'
 " Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
-Plugin 'Solarized'
+Plugin 'altercation/vim-colors-solarized'
 " zenburn
 Plugin 'zenburn'
 
@@ -31,6 +31,9 @@ set laststatus=2
 " Make backspace work properly
 inoremap <Char-0x07F> <BS>
 nnoremap <Char-0x07F> <BS>
+
+" For fast navigation
+set relativenumber
 
 syntax enable                   " Enable syntax highlighting
 
@@ -52,7 +55,7 @@ if !has("gui_running")
     set t_Co=256
     let &t_AB="\e[48;5;%dm"
     let &t_AF="\e[38;5;%dm"
-    colorscheme zenburn
+    colorscheme solarized
 endif
 " _________________________________FOR GVIM__________________________________
 
