@@ -20,7 +20,7 @@
     <li>must "gem intall rails" to install rails</li>
     <li>bundler install: "gem install bundler" </li>
     <li> coffeescript doesn't work on windows so include this in Gemfile for every new rails project: gem 'coffee-script-source', '1.8.0' and run: bundle update coffee-script-source </li>
-    <b> This is done to for coffeescript to older version that works for Windows </b>
+    <b> This is done to force coffeescript to older version that works for Windows </b>
     Solution explained: http://stackoverflow.com/a/28331807
 </ul>
 
@@ -34,5 +34,9 @@
     <li> Run rails server </li>
     <ul>
         <li> config/database.yml is missing (because it is included in .gitignore) </li>
+        temporarily placed base database.yml file in there
+        <li> Please install the sqlite3 adapter: `gem install activerecord-sqlite3-adapter` (sqlite3 is not part of the bundle. Add it to Gemfile.) (LoadError) </li>
+        add "gem 'sqlite3'" to Gemfile and run "bundle install"
+        <li> When visiting localhost: Could not find table 'categories' error in app/controllers/application_controller.rb:8:in `load_groups' </li>
     </ul>
 </ol>
