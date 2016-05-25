@@ -42,6 +42,9 @@
     <li> Install PostgreSQL </li>
     <li> "gem install pg" </li>
     <li> add C:\Program Files\PostgreSQL\9.5\bin to Path system variable </li> 
+    this is to allow command line PostgreSQL tasks
+    <li> Create user: postgre w/ password: postgre </li>
+    use pgadmin or command line
     <li> Run bundle</li> 
     <li> rake db:setup </li>
     <li> Run rails server </li>
