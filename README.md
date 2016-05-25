@@ -22,6 +22,8 @@
     <li> Download RailsInstaller: http://railsinstaller.org/en </li> 
     <li> Open Git bash and run: curl http://installrails.com/update_rubygems.rb | ruby </li>
 </ol>
+
+<b> Notes </b>
 <ul>
     <li>must "gem intall rails" to install rails</li>
     <li>bundler install: "gem install bundler" </li>
