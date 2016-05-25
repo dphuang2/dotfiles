@@ -17,7 +17,11 @@
 
 
 <h3> Rails Notes </h3>
-
+<b>  Installation:  </b>
+<ol>
+    <li> Download RailsInstaller: http://railsinstaller.org/en </li> 
+    <li> Open Git bash and run: curl http://installrails.com/update_rubygems.rb | ruby </li>
+</ol>
 <ul>
     <li>must "gem intall rails" to install rails</li>
     <li>bundler install: "gem install bundler" </li>
@@ -26,7 +30,7 @@
     Solution explained: http://stackoverflow.com/a/28331807
 </ul>
 
-<h3> IM Setup </h3>
+<h3> IM Setup from Scratch </h3>
 
 <ol>
     <li> Download RailsInstaller (Ruby 2.2.4 version) </li>
