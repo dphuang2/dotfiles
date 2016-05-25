@@ -21,12 +21,12 @@
 <ol>
     <li> Download RailsInstaller: http://railsinstaller.org/en </li> 
     <li> Open Git bash and run: curl http://installrails.com/update_rubygems.rb | ruby </li>
+    <li>must "gem intall rails" to install rails</li>
+    <li>bundler install: "gem install bundler" </li>
 </ol>
 
 <b> Notes </b>
 <ul>
-    <li>must "gem intall rails" to install rails</li>
-    <li>bundler install: "gem install bundler" </li>
     <li> coffeescript doesn't work on windows so include this in Gemfile for every new rails project: gem 'coffee-script-source', '1.8.0' and run: bundle update coffee-script-source </li>
     <b> This is done to force coffeescript to older version that works for Windows </b> <br>
     Solution explained: http://stackoverflow.com/a/28331807
