@@ -33,10 +33,10 @@
     <li> Run bundle install </li>
     <li> Run rails server </li>
     <ul>
-        <li> config/database.yml is missing (because it is included in .gitignore) </li>
+        <b><li> config/database.yml is missing (because it is included in .gitignore) </li></b>
         temporarily placed base database.yml file in there
-        <li> Please install the sqlite3 adapter: `gem install activerecord-sqlite3-adapter` (sqlite3 is not part of the bundle. Add it to Gemfile.) (LoadError) </li>
+        <b><li> Please install the sqlite3 adapter: `gem install activerecord-sqlite3-adapter` (sqlite3 is not part of the bundle. Add it to Gemfile.) (LoadError) </li></b>
         add "gem 'sqlite3'" to Gemfile and run "bundle install"
-        <li> When visiting localhost: Could not find table 'categories' error in app/controllers/application_controller.rb:8:in `load_groups' </li>
+        <b><li> When visiting localhost: Could not find table 'categories' error in app/controllers/application_controller.rb:8:in `load_groups' </li></b>
     </ul>
 </ol>
