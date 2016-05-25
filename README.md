@@ -1,6 +1,7 @@
 <h3> VIM SETUP </h3> 
 <ol>
     <li> Install vim, ConEmu, and mysgit </li>
+    <li> Add "C:\Program Files (x86)\Vim\vim74" to Path system variable </li>
     <li> Install Vundle by cloning into %USERPROFILE%/vimfiles/bundle/Vundle.vim </li>
     https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
     Gonna have to use this command (explained in link):
@@ -8,6 +9,7 @@
         <li>git clone https://github.com/gmarik/Vundle.vim.git %USERPROFILE%/vimfiles/bundle/Vundle.vim </li>
     </ul> 
     <li> Clone dotfiles from github </li>
+    git clone https://github.com/dphuang2/dotfiles.git
     <li> Copy and paste dotfile into %USERPROFILE% directory </li>
     <li> Open ConEmu and import settings </li>
     <li> Run Vim from ConEmu and :PluginInstall! </li>
