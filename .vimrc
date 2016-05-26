@@ -11,6 +11,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'zenburn'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -18,8 +19,15 @@ filetype plugin indent on    " required
 
 " ________________________________________________________AFTER PLUGINS_______________________________________________
 
+"<C-P> to :CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"<C-B> to :buffers
+:nnoremap <C-B> :buffers<CR>:buffer<Space>
+
 " Automatically start NERDTree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " Map Ctrl+N to Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 " Keep Airline from disappearing when NERDTree is gone
@@ -66,6 +74,7 @@ if has("gui_running")
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
+  colorscheme solarized
 endif
 
 :set guioptions-=L  "remove left-hand scroll bar
