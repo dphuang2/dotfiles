@@ -24,7 +24,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "<C-B> to :buffers
-:nnoremap <C-B> :buffers<CR>:buffer<Space>
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Automatically start NERDTree
 " autocmd vimenter * NERDTree
