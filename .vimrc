@@ -17,14 +17,14 @@ Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" ________________________________________________________AFTER PLUGINS_______________________________________________
+" ________________________________________________________AFTER PLUGINS_______________________________________________ 
 
 "<C-P> to :CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "<C-B> to :buffers
-:nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Automatically start NERDTree
 " autocmd vimenter * NERDTree
@@ -37,7 +37,7 @@ set laststatus=2
 inoremap <Char-0x07F> <BS>
 nnoremap <Char-0x07F> <BS>
 
-set backspace=2 " make backspace work like most other apps
+ set backspace=2 " make backspace work like most other apps
 
 " For fast navigation
 set relativenumber
