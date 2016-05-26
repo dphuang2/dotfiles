@@ -38,7 +38,6 @@
     <li> Download RailsInstaller (Ruby 2.2.4 version) </li>
     <li> Clone from github: https://github.com/berkmancenter/internet_monitor.git </li>
     <li> Gemfile specifies ruby version 2.1.6 so need to change to 2.2.4 </li>
-    <li> add gem 'sqlite3' to Gemfile (might not need) </li>
     <li> Install PostgreSQL </li>
     <li> "gem install pg" </li>
     <li> add C:\Program Files\PostgreSQL\9.5\bin to Path system variable </li> 
@@ -52,11 +51,11 @@
 
 <b>Errors</b>
 <ul>
-    <b><li> config/database.yml is missing (because it is included in .gitignore) </li></b>
-    Solution: temporarily placed base database.yml file in there
-    <b><li> Please install the sqlite3 adapter: `gem install activerecord-sqlite3-adapter` (sqlite3 is not part of the bundle. Add it to Gemfile.) (LoadError) </li></b>
-    Solution: add "gem 'sqlite3'" to Gemfile and run "bundle install"
-    <b><li> When visiting localhost: Could not find table 'categories' error in app/controllers/application_controller.rb:8:in `load_groups' </li></b>
-    <li> Install PostgreSQL </li> 
-    <li> "gem install pg" </li> 
+    ~~<b><li> config/database.yml is missing (because it is included in .gitignore) </li></b>~~
+    ~~Solution: temporarily placed base database.yml file in there~~
+    ~~<b><li> Please install the sqlite3 adapter: `gem install activerecord-sqlite3-adapter` (sqlite3 is not part of the bundle. Add it to Gemfile.) (LoadError) </li></b>~~
+    ~~Solution: add "gem 'sqlite3'" to Gemfile and run "bundle install"~~
+    ~~<b><li> When visiting localhost: Could not find table 'categories' error in app/controllers/application_controller.rb:8:in `load_groups' </li></b>~~
+    ~~<li> Install PostgreSQL </li>~~ 
+    ~~<li> "gem install pg" </li>~~ 
 </ul>
