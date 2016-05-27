@@ -37,7 +37,7 @@ set laststatus=2
 inoremap <Char-0x07F> <BS>
 nnoremap <Char-0x07F> <BS>
 
- set backspace=2 " make backspace work like most other apps
+set backspace=2 " make backspace work like most other apps
 
 " For fast navigation
 set relativenumber
