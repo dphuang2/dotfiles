@@ -23,7 +23,7 @@ filetype plugin indent on    " required
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"<C-B> to :buffers
+"<F5> to :buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Automatically start NERDTree
