@@ -19,11 +19,16 @@ filetype plugin indent on    " required
 
 " ________________________________________________________AFTER PLUGINS_______________________________________________ 
 
+" Easy paste from system clipboard
+:map <F2> "+p
+" Easy copy to system clipboard
+:map <F3> "*y
+
 "<C-P> to :CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"<F5> to :buffers
+"<C-B> to :buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Automatically start NERDTree
