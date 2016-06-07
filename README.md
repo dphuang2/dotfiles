@@ -59,3 +59,32 @@
     <del><li> Install PostgreSQL </li></del> 
     <del><li> "gem install pg" </li></del> 
 </ul>
+
+
+<h3>Apachi-Nifi setup for Windows 10 64 bit</h3>
+
+<ol>
+   <li> Download apachi-nifi </li>
+   <li> execute run-nifi in the bin folder </li>
+   <li> open localhost:8080/nifi </li>
+</ol>
+
+<h3>Streamsets setup for Windows 10 64 bit </h3>
+The only difference between Mac OS and Windows is that you would not use Vagrant (Linux box) and have to update or change config of Java
+<ol>
+    <li> Install Vagrant </li>
+    <li> vagrant box add hashicorp/precise32 </li>
+     if there are problems adding the box, install C++ 2010 SP1 Reidistributable Package (x86): https://github.com/mitchellh/vagrant/issues/6852 
+    <li> vagrant init hashicorp/precise32 </li>
+    <li> edit Vagrantfile by uncommenting private-network line and changing ip to "55.55.55.5" </li>
+    <li> vagrant ssh [to ssh into the virtual box] </li>
+    <li> wget https://archives.streamsets.com/datacollector/1.4.0.0/tarball/streamsets-datacollector-all-1.4.0.0.tgz </li>
+    <li> tar xvzf streamsets-datacollector-all-1.4.0.0.tgz inside of ssh </li>
+    <li> sudo apt-get update </li>
+    <li> sudo apt-get install openjdk-7-jdk openjdk-7-jre </li>
+    <li> sudo update-alternatives --config java and select Java 7 </li>
+    http://www.mkyong.com/java/java-unsupported-major-minor-version-51-0/ for explanation of last two steps
+    <li> streamsets-datacollector-1.4.0.0/bin/streamsets dc </li>
+    <li> navigate to "55.55.55.5:18630" in browser </li>
+    <li> login with user: admin, pass: admin </li>
+</ol>
