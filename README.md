@@ -87,4 +87,5 @@ The only difference between Mac OS and Windows is that you would not use Vagrant
     <li> streamsets-datacollector-1.4.0.0/bin/streamsets dc </li>
     <li> navigate to "55.55.55.5:18630" in browser </li>
     <li> login with user: admin, pass: admin </li>
+    important to note that you must use shared folder (/vagrant) to share files with streamsets
 </ol>
