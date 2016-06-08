@@ -70,7 +70,7 @@
 </ol>
 
 <h3>Streamsets setup for Windows 10 64 bit </h3>
-The only difference between Mac OS and Windows is that you would not use Vagrant (Linux box) and have to update or change config of Java
+The only difference between Mac OS and Windows is that you would not have to use Vagrant (Linux box)
 <ol>
     <li> Install Vagrant </li>
     <li> vagrant box add ubuntu/trusty64 </li>
