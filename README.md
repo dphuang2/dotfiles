@@ -74,7 +74,7 @@ The only difference between Mac OS and Windows is that you would not have to use
 <ol>
     <li> Install Vagrant </li>
     <li> vagrant box add ubuntu/trusty64 </li>
-    Important Note: MUST USE Ubuntu 14.04 or above
+    Important Note: MUST USE Ubuntu 14.04 or above <br>
      if there are problems adding the box, install C++ 2010 SP1 Reidistributable Package (x86): https://github.com/mitchellh/vagrant/issues/6852 
     <li> vagrant init ubuntu/trusty64 </li>
     <li> Download Vagrantfile from https://github.com/dphuang2/dotfiles </li>
