@@ -77,9 +77,11 @@ The only difference between Mac OS and Windows is that you would not have to use
      if there are problems adding the box, install C++ 2010 SP1 Reidistributable Package (x86): https://github.com/mitchellh/vagrant/issues/6852 
     <li> vagrant init ubuntu/trusty64 </li>
     <li> edit Vagrantfile by uncommenting private-network line and changing ip to "55.55.55.5" </li>
+    it is also an option to DL vagrantfile from https://github.com/dphuang2/dotfiles
     <li> vagrant ssh [to ssh into the virtual box] </li>
     <li> wget https://archives.streamsets.com/datacollector/1.4.0.0/tarball/streamsets-datacollector-all-1.4.0.0.tgz </li>
     <li> tar xvzf streamsets-datacollector-all-1.4.0.0.tgz inside of ssh </li>
+    next three steps are not required if Vagrantfile was downloaded
     <li> sudo apt-get update </li>
     <li> sudo apt-get install openjdk-7-jdk openjdk-7-jre </li>
     <li> sudo update-alternatives --config java and select Java 7 </li>
