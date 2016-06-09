@@ -67,5 +67,6 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", inline: <<-SHELL
         sudo apt-get update
         sudo apt-get install openjdk-7-jdk openjdk-7-jre
+        sudo apt-get install vim
     SHELL
 end
