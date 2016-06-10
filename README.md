@@ -75,10 +75,15 @@ The only difference between Mac OS and Windows is that you would not have to use
     <li> Install Vagrant </li>
     <li> vagrant box add ubuntu/trusty64 </li>
     Important Note: MUST USE Ubuntu 14.04 or above <br>
-     if there are problems adding the box, install C++ 2010 SP1 Reidistributable Package (x86): https://github.com/mitchellh/vagrant/issues/6852 
-    <li> vagrant init ubuntu/trusty64 </li>
+    if there are problems adding the box, install C++ 2010 SP1 Reidistributable Package (x86): https://github.com/mitchellh/vagrant/issues/6852 
+    <li> make folder to host VM (Ubuntu64) </li>
+    <li> vagrant init ubuntu/trusty64 (inside of newly made folder) </li>
     <li> Download Vagrantfile from https://github.com/dphuang2/dotfiles </li>
+    <li> replace new Vagrantfile made from init with downloaded Vagrantfile </li>
+    <li> vagrant up (inside of folder) </li>
     <del> <li> edit Vagrantfile by uncommenting private-network line and changing ip to "55.55.55.5" </li> </del>
+    <li> add C:\Program Files (x86)\Git\bin to path environment variables </li>
+    This requires an install of git
     <li> vagrant ssh [to ssh into the virtual box] </li>
     <li> wget https://archives.streamsets.com/datacollector/1.4.0.0/tarball/streamsets-datacollector-all-1.4.0.0.tgz </li>
     this takes a while since Streamsets is very large
