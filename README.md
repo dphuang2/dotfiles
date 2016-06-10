@@ -87,8 +87,7 @@ The only difference between Mac OS and Windows is that you would not have to use
     <li> vagrant ssh [to ssh into the virtual box] </li>
     <li> wget https://archives.streamsets.com/datacollector/1.4.0.0/tarball/streamsets-datacollector-all-1.4.0.0.tgz </li>
     this takes a while since Streamsets is very large
-    <li> tar xvzf streamsets-datacollector-all-1.4.0.0.tgz inside of ssh </li>
-    <li> sudo apt-get update </li>
+    <li> tar xvzf streamsets-datacollector-all-1.4.0.0.tgz </li>
     <li> sudo apt-get install openjdk-7-jdk openjdk-7-jre </li>
     this next step is only needed in the case that multiple java versions are installed
     <li> sudo update-alternatives --config java and select Java 7 </li>
