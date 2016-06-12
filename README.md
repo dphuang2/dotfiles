@@ -87,9 +87,9 @@ The only difference between Mac OS and Windows is that you would not have to use
     <li> wget https://archives.streamsets.com/datacollector/1.4.0.0/tarball/streamsets-datacollector-all-1.4.0.0.tgz </li>
     this takes a while since Streamsets is very large
     <li> tar xvzf streamsets-datacollector-all-1.4.0.0.tgz </li>
-    <li> sudo apt-get install default-jre </li>  
+    <li> follow steps to install Oracle JDK 8 in the link below </li>   
     https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
-    <li> sudo update-alternatives --config java and select Java 7 </li>
+    <li> sudo update-alternatives --config java and select Java 8 </li>
     above step is only needed in the case that multiple java versions are installed <br>
     http://www.mkyong.com/java/java-unsupported-major-minor-version-51-0/ for explanation of last two steps
     <li> streamsets-datacollector-1.4.0.0/bin/streamsets dc </li>
