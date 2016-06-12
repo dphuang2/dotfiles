@@ -81,7 +81,6 @@ The only difference between Mac OS and Windows is that you would not have to use
     <li> Download Vagrantfile from https://github.com/dphuang2/dotfiles </li>
     <li> replace new Vagrantfile made from init with downloaded Vagrantfile </li>
     <li> vagrant up (inside of folder) </li>
-    <del> <li> edit Vagrantfile by uncommenting private-network line and changing ip to "55.55.55.5" </li> </del>
     <li> add C:\Program Files (x86)\Git\bin to path environment variables </li>
     This requires an install of git
     <li> vagrant ssh [to ssh into the virtual box] </li>
@@ -89,14 +88,19 @@ The only difference between Mac OS and Windows is that you would not have to use
     this takes a while since Streamsets is very large
     <li> tar xvzf streamsets-datacollector-all-1.4.0.0.tgz </li>
     <li> sudo apt-get install default-jre </li>  
-    <del> follow steps to install Open JDK 7 in the link below <br> </del>
     https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
-    <del> <li> add JAVA_HOME="/usr/lib/jvm/java-8-oracle" to your "/etc/environment" file </li> </del>
     <li> sudo update-alternatives --config java and select Java 7 </li>
-    above step is only needed in the case that multiple java versions are installed
+    above step is only needed in the case that multiple java versions are installed <br>
     http://www.mkyong.com/java/java-unsupported-major-minor-version-51-0/ for explanation of last two steps
     <li> streamsets-datacollector-1.4.0.0/bin/streamsets dc </li>
     <li> navigate to "55.55.55.5:18630" in browser </li>
     <li> login with user: admin, pass: admin </li>
     important to note that you must use shared folder (/vagrant) to share files with streamsets
 </ol>
+<h5> Old steps for Streamsets </h5>
+<ul>
+    <del> <li> follow steps to install Open JDK 7 in the link below </li> </del> 
+    <del> <li> edit Vagrantfile by uncommenting private-network line and changing ip to "55.55.55.5" </li> </del>
+    <del> <li> add JAVA_HOME="/usr/lib/jvm/java-8-oracle" to your "/etc/environment" file </li> </del>
+</ul>
+
