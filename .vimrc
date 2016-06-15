@@ -4,25 +4,49 @@ filetype off                  " required
 set rtp+=~/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" A tree explorer plugin for navigating the filesystem
 Plugin 'The-NERD-tree'
-" Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
-Plugin 'Solarized'
-" zenburn
-Plugin 'zenburn'
-" Airline
 Plugin 'vim-airline/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'zenburn'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" ________________________________________________________AFTER PLUGINS_______________________________________________ 
+
+" Easy paste from system clipboard
+:map <F2> "+p
+" Easy copy to system clipboard
+:map <F3> "*y
+
+"<C-P> to :CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"<C-B> to :buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
 " Automatically start NERDTree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " Map Ctrl+N to Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
+" Keep Airline from disappearing when NERDTree is gone
+set laststatus=2
+
+" Make backspace work properly in ConEmu
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
+
+set backspace=2 " make backspace work like most other apps
+
+" For fast navigation
+set relativenumber
 
 syntax enable                   " Enable syntax highlighting
 
@@ -44,7 +68,7 @@ if !has("gui_running")
     set t_Co=256
     let &t_AB="\e[48;5;%dm"
     let &t_AF="\e[38;5;%dm"
-    colorscheme zenburn
+    colorscheme solarized
 endif
 " _________________________________FOR GVIM__________________________________
 
