@@ -21,9 +21,9 @@ filetype plugin indent on    " required
 " ________________________________________________________AFTER PLUGINS_______________________________________________ 
 
 " Easy paste from system clipboard
-:map <F2> "+p
+:map <F3> "+p
 " Easy copy to system clipboard
-:map <F3> "*y
+:map <F2> "*y
 
 "<C-P> to :CtrlP
 let g:ctrlp_map = '<c-p>'

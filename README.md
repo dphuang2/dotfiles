@@ -103,4 +103,3 @@ The only difference between Mac OS and Windows is that you would not have to use
     <del> <li> edit Vagrantfile by uncommenting private-network line and changing ip to "55.55.55.5" </li> </del>
     <del> <li> add JAVA_HOME="/usr/lib/jvm/java-8-oracle" to your "/etc/environment" file </li> </del>
 </ul>
-
