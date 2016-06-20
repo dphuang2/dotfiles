@@ -63,5 +63,5 @@ syntax enable			" enable language syntax
 if !has("gui_running")
     colorscheme Solarized
     set background=dark
-    set t_Co=256
+    let g:solarized_termcolors=256
 endif
