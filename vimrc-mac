@@ -61,7 +61,7 @@ set cursorline                  " Highlight line cursor is on
 syntax enable			" enable language syntax
 
 if !has("gui_running")
-    colorscheme molokai
+    colorscheme Solarized
     set background=dark
     set t_Co=256
 endif
