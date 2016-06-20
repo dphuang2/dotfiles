@@ -1,0 +1,67 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'The-NERD-tree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'zenburn'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-commentary'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" ________________________________________________________AFTER PLUGINS_______________________________________________ 
+
+" Easy paste from system clipboard
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+" Easy copy to system clipboard
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+
+"<C-P> to :CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"<C-B> to :buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" Automatically start NERDTree
+" autocmd vimenter * NERDTree
+" Map Ctrl+N to Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+" Keep Airline from disappearing when NERDTree is gone
+set laststatus=2
+
+set backspace=2 " make backspace work like most other apps
+
+" For fast navigation
+set relativenumber
+
+syntax enable                   " Enable syntax highlighting
+
+set hlsearch                    " Highlight search results
+set incsearch                   " Jump to search results as you type
+
+set softtabstop=4               " 4-space tabs
+set shiftwidth=4
+set expandtab
+set autoindent			" auto indent
+
+set number                      " Show line numbers
+set cursorline                  " Highlight line cursor is on
+
+syntax enable			" enable language syntax
+
+if !has("gui_running")
+    colorscheme molokai
+    set background=dark
+    set t_Co=256
+endif
