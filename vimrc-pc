@@ -58,10 +58,7 @@ set shiftwidth=4
 set expandtab
 set autoindent			" auto indent
 
-set number                      " Show line numbers
 set cursorline                  " Highlight line cursor is on
-
-syntax enable			" enable language syntax
 
 if !has("gui_running")
     set term=xterm
