@@ -64,3 +64,8 @@ if !has("gui_running")
     let g:airline_theme='solarized'
     set t_Co=256
 endif
+
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O<Tab>
+inoremap {{     {
+inoremap {}     {}
