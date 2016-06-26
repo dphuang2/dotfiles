@@ -58,6 +58,21 @@ set autoindent			" auto indent
 
 set cursorline                  " Highlight line cursor is on
 
+" Automatic bracket closing
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O<Tab>
+inoremap {{     {
+inoremap {}     {}
+
+" We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
+
 if !has("gui_running")
     colorscheme Solarized
     set background=dark
@@ -65,7 +80,3 @@ if !has("gui_running")
     set t_Co=256
 endif
 
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O<Tab>
-inoremap {{     {
-inoremap {}     {}
