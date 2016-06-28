@@ -4,6 +4,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'justinmk/vim-sneak'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'
 Plugin 'vim-airline/vim-airline'
