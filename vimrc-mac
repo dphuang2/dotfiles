@@ -4,6 +4,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/syntastic'
 Plugin 'justinmk/vim-sneak'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'
@@ -60,12 +62,6 @@ set expandtab
 set autoindent			" auto indent
 
 set cursorline                  " Highlight line cursor is on
-
-" Automatic bracket closing
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O<Tab>
-inoremap {{     {
-inoremap {}     {}
 
 " We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j
 nnoremap <C-J> <C-W><C-J>
