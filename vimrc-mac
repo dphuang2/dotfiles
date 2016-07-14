@@ -4,6 +4,9 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
@@ -19,7 +22,6 @@ Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +38,10 @@ nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"<C-B> to :buffers
+" Tagbar key map
+nmap <F7> :TagbarToggle<CR>
+
+"<F5> to :buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
 "<C-A> to copy all
 nmap <C-a> mpggVG<C-c>'p
@@ -92,4 +97,3 @@ if !has("gui_running")
 endif
 " Toggle background
 call togglebg#map("<F6>")
-
