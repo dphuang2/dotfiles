@@ -4,6 +4,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'rizzatti/dash.vim'
+Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
@@ -27,7 +29,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" ________________________________________________________AFTER PLUGINS_______________________________________________ 
+" ________________________________________________________AFTER VUNDLE_______________________________________________ 
+
+" Setting directory for where notes are placedj
+:let g:notes_directories = ['/Volumes/STORAGE/Git/Notes']
 
 " Easy paste from system clipboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
@@ -88,6 +93,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_scss_checkers = [ 'sass_lint' ] " Don't show warnings for include statements in scss files
+
+" Don't 'show assigned but unsused variable error' in ruby
+let g:syntastic_ruby_mri_quiet_messages = { 
+            \ "type":  "style",
+            \ "regex": 'assigned but unused variable' }
+<
 
 if !has("gui_running")
     colorscheme Solarized
