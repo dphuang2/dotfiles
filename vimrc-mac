@@ -4,6 +4,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'rizzatti/dash.vim'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
