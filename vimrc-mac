@@ -4,6 +4,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'ruby-matchit'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rizzatti/dash.vim'
