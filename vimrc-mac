@@ -97,7 +97,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_scss_checkers = [ 'sass_lint' ] " Don't show warnings for include statements in scss files
 
-" Don't 'show assigned but unsused variable error' in ruby
+" Don't show assigned but unsused variable error' in ruby
 let g:syntastic_ruby_mri_quiet_messages = { 
             \ "type":  "style",
             \ "regex": 'assigned but unused variable' }
