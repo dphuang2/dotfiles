@@ -34,9 +34,6 @@ filetype plugin indent on    " required
 
 " ________________________________________________________AFTER VUNDLE_______________________________________________ 
 
-" Enter to close menu for YCM
-:inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
-
 " Setting directory for where notes are placedj
 :let g:notes_directories = ['/Volumes/STORAGE/Git/Notes']
 
@@ -74,8 +71,8 @@ syntax enable                   " Enable syntax highlighting
 set hlsearch                    " Highlight search results
 set incsearch                   " Jump to search results as you type
 
-set softtabstop=4               " 4-space tabs
-set shiftwidth=4
+set softtabstop=2               " 2-space tabs
+set shiftwidth=2
 set expandtab
 set autoindent			" auto indent
 
