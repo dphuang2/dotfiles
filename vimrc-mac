@@ -34,6 +34,9 @@ filetype plugin indent on    " required
 
 " ________________________________________________________AFTER VUNDLE_______________________________________________ 
 
+" Enter to close menu for YCM
+:inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
+
 " Setting directory for where notes are placedj
 :let g:notes_directories = ['/Volumes/STORAGE/Git/Notes']
 
