@@ -1,5 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
@@ -37,10 +35,10 @@ filetype plugin indent on    " required
 " Setting directory for where notes are placedj
 :let g:notes_directories = ['/Volumes/STORAGE/Git/Notes']
 
-" Easy paste from system clipboard
-vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 " Easy copy to system clipboard
-nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+vmap <F9> "+y
+" Easy paste from system clipboard
+nmap <F10> "+p
 
 "<C-P> to :CtrlP
 let g:ctrlp_map = '<c-p>'
@@ -111,3 +109,5 @@ if !has("gui_running")
 endif
 " Toggle background
 call togglebg#map("<F6>")
+
+
