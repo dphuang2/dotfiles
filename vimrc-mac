@@ -50,7 +50,7 @@ nmap <F7> :TagbarToggle<CR>
 "<F5> to :buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
 "<C-A> to copy all
-nmap <C-a> mpggVG<C-c>'p
+nmap <C-a> mpggVG<F9>'p
 
 " Automatically start NERDTree
 " autocmd vimenter * NERDTree
@@ -100,6 +100,9 @@ let g:syntastic_ruby_mri_quiet_messages = {
             \ "type":  "style",
             \ "regex": 'assigned but unused variable' }
 <
+" Ignore warnings on meteor js
+let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings"  }
+let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!'  ]
 
 if !has("gui_running")
     colorscheme Solarized
