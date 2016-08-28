@@ -1,5 +1,6 @@
 cd /Volumes/STORAGE/Git
 alias vim='mvim -v'
+alias vrc='vim ~/.vimrc'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Setting PATH for Python 2.7
