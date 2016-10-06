@@ -13,12 +13,18 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " ________________________________________________________AFTER PLUGINS_______________________________________________ 
+
+" Open splits in natural direction
+set splitbelow
+set splitright
+
 
 " Easy paste from system clipboard
 :map <F3> "+p
