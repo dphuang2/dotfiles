@@ -12,7 +12,8 @@ Plugin 'zenburn'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'justinmk/vim-sneak'
 Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
