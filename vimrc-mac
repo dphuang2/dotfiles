@@ -37,10 +37,8 @@ filetype plugin indent on    " required
 " Setting directory for where notes are placedj
 :let g:notes_directories = ['/Volumes/STORAGE/Git/Notes']
 
-" Easy copy to system clipboard
-vmap <F9> "+y
-" Easy paste from system clipboard
-nmap <F10> "+p
+" Set default register to system clipboard
+set clipboard=unnamed
 
 "<C-P> to :CtrlP
 let g:ctrlp_map = '<c-p>'
