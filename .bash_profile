@@ -1,4 +1,6 @@
 cd /Volumes/STORAGE/Git
+alias ece391='cd /Volumes/STORAGE/ece391/ece391_share/work'
+alias gitd='cd /Volumes/STORAGE/Git'
 alias vim='mvim -v'
 alias vrc='vim ~/.vimrc'
 alias pogo='ssh deploy@97.107.142.163'
