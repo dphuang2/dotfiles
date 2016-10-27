@@ -4,6 +4,7 @@ filetype off                  " required
 set rtp+=~/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 
+Plugin 'vim-scripts/matchit.zip'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'
 Plugin 'vim-airline/vim-airline'
