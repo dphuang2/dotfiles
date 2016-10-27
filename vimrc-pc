@@ -26,15 +26,15 @@ filetype plugin indent on    " required
 set splitbelow
 set splitright
 
-
-" Easy paste from system clipboard
-:map <F3> "+p
-" Easy copy to system clipboard
-:map <F2> "*y
+" Set default register to system clipboard
+set clipboard=unnamed
 
 "<C-P> to :CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_prompt_mappings = {
+            \ 'AcceptSelection("v")': ['<c-c>', '<RightMouse>'],
+            \ }
 
 " We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j
 nnoremap <C-J> <C-W><C-J>
@@ -49,6 +49,7 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 " autocmd vimenter * NERDTree
 " Map Ctrl+N to Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
+
 " Keep Airline from disappearing when NERDTree is gone
 set laststatus=2
 
