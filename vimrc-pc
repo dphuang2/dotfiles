@@ -23,6 +23,8 @@ filetype plugin indent on    " required
 
 " ________________________________________________________AFTER PLUGINS_______________________________________________ 
 
+:imap ` <Esc>
+
 " Open splits in natural direction
 set splitbelow
 set splitright
