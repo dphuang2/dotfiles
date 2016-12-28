@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-source ~/.bash_profile
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/dylanhuang/.oh-my-zsh
@@ -74,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -84,3 +83,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+alias cs225= '/Users/dylanhuang/Classes/cs225'
+alias ece391='cd /Users/dylanhuang/Classes/ece391/ece391_share/work/'
+alias vim='mvim -v'
+alias :q='exit'
+alias vrc='vim ~/.vimrc'
+alias pogo='ssh deploy@97.107.142.163'
+alias tweed='ssh deploy@138.197.27.67'
+alias schl='ssh dphuang2@linux.ews.illinois.edu'
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Setting PATH for Python 2.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
