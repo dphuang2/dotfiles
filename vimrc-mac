@@ -14,7 +14,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
-"Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'justinmk/vim-sneak'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'The-NERD-tree'
@@ -45,8 +45,9 @@ nmap <F7> :TagbarToggle<CR>
 
 "<F5> to :buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
+
 "<C-A> to copy all
-nmap <C-a> mpggVG<F9>'p
+"nmap <C-a> mpggVG<F9>'p
 
 " Automatically start NERDTree
 " autocmd vimenter * NERDTree
