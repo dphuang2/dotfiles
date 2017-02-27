@@ -91,8 +91,10 @@ alias ece391='cd /Users/dylanhuang/Classes/ece391/ece391_share/work/'
 alias vim='mvim -v'
 alias :q='exit'
 alias vrc='vim ~/.vimrc'
+alias ece385="cd /Users/dylanhuang/Dropbox/UIUC/Classes/ECE\ 385"
 alias pogo='ssh deploy@97.107.142.163'
 alias tweed='ssh deploy@138.197.27.67'
+alias tweed2='ssh root@174.138.76.116'
 alias schl='ssh dphuang2@linux.ews.illinois.edu'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
