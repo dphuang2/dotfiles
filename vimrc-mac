@@ -118,4 +118,12 @@ endif
 " Toggle background
 call togglebg#map("<F6>")
 
-
+" No swap files
+set noswapfile  
+set nobackup  
+set nowritebackup  
+" Persistent undos
+if !&diff  
+  set undodir=~/.vim/undodir  
+  set undofile  
+endif  
