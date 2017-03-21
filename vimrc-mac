@@ -2,6 +2,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'The-NERD-tree'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -27,7 +28,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'zenburn'
 "Plugin 'vim-syntastic/syntastic'
 "Plugin 'ruby-matchit'
-"Plugin 'Valloric/YouCompleteMe'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            "required
@@ -111,6 +111,11 @@ if !&diff
   set undofile  
 endif  
 
+"----------------YOUCOMPLETEME----------------
+let g:ycm_key_list_select_completion = ['<C-J>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-K>', '<Up>']
+"----------------YOUCOMPLETEME----------------
+
 "__________________MARKDOWN__________________
 "Turn on spell check in markdown files
 autocmd FileType markdown :setlocal spell spelllang=en_us
@@ -118,7 +123,7 @@ autocmd FileType markdown :setlocal spell spelllang=en_us
 "Set textwidth to 80 in markdown files
 autocmd FileType markdown :setlocal textwidth=80
 "__________________MARKDOWN__________________
-"
+
 "_______________vim-grammarous_______________
 let g:grammarous#hooks = {}
 function! g:grammarous#hooks.on_check(errs) abort
