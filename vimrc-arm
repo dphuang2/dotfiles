@@ -2,14 +2,12 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'The-NERD-tree'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'justinmk/vim-sneak'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'majutsushi/tagbar'
 Plugin 'othree/html5.vim'
 Plugin 'rhysd/vim-grammarous'
 Plugin 'rizzatti/dash.vim'
@@ -23,7 +21,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'zenburn'
 "Plugin 'vim-syntastic/syntastic'
@@ -70,16 +67,16 @@ set hlsearch
 "Jump to search results as you type
 set incsearch                   
 
-"2-space tabs
-set softtabstop=2               
-set shiftwidth=2
+"4-space tabs
+set softtabstop=4               
+set shiftwidth=4
 set expandtab
 
 "auto indent
 set autoindent			
 
 "Highlight line cursor is on
-set cursorline                  
+"set cursorline                  
 
 "We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j
 nnoremap <C-J> <C-W><C-J>
@@ -95,15 +92,10 @@ set splitright
 set backupdir=./.backup,.,/tmp
 set directory=./.backup,.,/tmp
 
-if !has("gui_running")
-    colorscheme Solarized
-    set background=dark
-    let g:airline_theme='solarized'
-    set t_Co=256
-endif
-
-"Toggle background
-call togglebg#map("<F6>")
+colorscheme solarized
+set background=dark
+let g:airline_theme='solarized'
+set t_Co=256
 
 "Persistent undos
 if !&diff  
