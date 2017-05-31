@@ -1,0 +1,177 @@
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'The-NERD-tree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'justinmk/vim-sneak'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'majutsushi/tagbar'
+Plugin 'othree/html5.vim'
+Plugin 'rhysd/vim-grammarous'
+Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'zenburn'
+"Plugin 'vim-syntastic/syntastic'
+"Plugin 'ruby-matchit'
+
+"All of your Plugins must be added before the following line
+call vundle#end()            "required
+filetype plugin indent on    "required
+
+"___________________________________________________AFTER VUNDLE___________________________________________________
+
+"Set default register to system clipboard
+set clipboard=unnamed 
+
+"<C-P> to :CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"Tagbar key map
+nmap <F7> :TagbarToggle<CR>
+
+"<F5> to :buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+"Map Ctrl+N to Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+
+"Keep Airline from disappearing when NERDTree is gone
+set laststatus=2
+
+"make backspace work like most other apps
+set backspace=2 
+
+"For fast navigation
+set relativenumber
+set number
+
+"Enable syntax highlighting
+syntax enable                   
+
+"Highlight search results
+set hlsearch                    
+
+"Jump to search results as you type
+set incsearch                   
+
+"2-space tabs
+set softtabstop=2               
+set shiftwidth=2
+set expandtab
+
+"auto indent
+set autoindent			
+
+"Highlight line cursor is on
+set cursorline                  
+
+"We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
+
+"To get rid of annoying .swp files in every directory
+set backupdir=./.backup,.,/tmp
+set directory=./.backup,.,/tmp
+
+if !has("gui_running")
+    colorscheme Solarized
+    set background=dark
+    let g:airline_theme='solarized'
+    set t_Co=256
+endif
+
+"Toggle background
+call togglebg#map("<F6>")
+
+"Persistent undos [MUST run 'mkdir ~/.vim/undodir' for this to work]
+if !&diff  
+  set undodir=~/.vim/undodir  
+  set undofile  
+endif  
+
+"----------------YOUCOMPLETEME----------------
+let g:ycm_key_list_select_completion = ['<C-J>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-K>', '<Up>']
+"----------------YOUCOMPLETEME----------------
+
+"__________________MARKDOWN__________________
+"Turn on spell check in markdown files
+autocmd FileType markdown :setlocal spell spelllang=en_us
+
+"Set textwidth to 80 in markdown files
+autocmd FileType markdown :setlocal textwidth=80
+"__________________MARKDOWN__________________
+
+"_______________vim-grammarous_______________
+let g:grammarous#hooks = {}
+function! g:grammarous#hooks.on_check(errs) abort
+    nmap <buffer>gn <Plug>(grammarous-move-to-next-error)
+    nmap <buffer>gp <Plug>(grammarous-move-to-previous-error)
+    nmap <buffer>gr <Plug>(grammarous-move-to-info-window)r
+    nmap <buffer>gf <Plug>(grammarous-move-to-info-window)f
+    nmap <buffer>gR <Plug>(grammarous-move-to-info-window)R
+endfunction
+function! g:grammarous#hooks.on_reset(errs) abort
+    nunmap <buffer>gn
+    nunmap <buffer>gp
+    nunmap <buffer>gr
+    nunmap <buffer>gf
+    nunmap <buffer>gR
+endfunction
+let g:grammarous#disabled_rules = {
+            \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES'],
+            \ 'help' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
+            \ }
+"_______________vim-grammarous_______________
+
+"-------------VIM JSX JAVASCRIPT-------------
+let g:jsx_ext_required = 0
+"-------------VIM JSX JAVASCRIPT-------------
+
+"_________________Syntastic_________________
+""Syntastic recommended settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_scss_checkers = [ 'sass_lint' ] "Don't show warnings for include statements in scss files
+
+""Don't show assigned but unsused variable error' in ruby
+"let g:syntastic_ruby_mri_quiet_messages = { 
+            "\ "type":  "style",
+            "\ "regex": 'assigned but unused variable' }
+"<
+""Ignore warnings on meteor js
+"let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings"  }
+"let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!'  ]
+""Ignore eruby warnings
+"let g:syntastic_eruby_ruby_quiet_messages =
+    "\ {'regex': 'possibly useless use of'}
+""_________________Syntastic_________________
