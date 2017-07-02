@@ -38,6 +38,10 @@ filetype plugin indent on    "required
 
 "___________________________________________________AFTER VUNDLE___________________________________________________
 
+"Spacebar folding
+nnoremap <space> za
+vnoremap <space> zf
+
 "Set default register to system clipboard
 set clipboard=unnamed 
 
