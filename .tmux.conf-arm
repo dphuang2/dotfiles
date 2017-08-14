@@ -21,7 +21,8 @@ bind Escape copy-mode
 unbind p
 bind p paste-buffer
 bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-selection
+# bind-key -t vi-copy 'y' copy-selection
+bind -t vi-copy y copy-pipe 'xclip -in -selection clipboard'
 
 #resize pane with mouse
 bind-key m set-option -g mode-mouse on \; set-option mouse-resize-pane on \; set-option mouse-select-pane on \; set-option mouse-select-window on \; display 'Mouse: On'
