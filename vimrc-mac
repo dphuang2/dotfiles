@@ -117,10 +117,10 @@ if !&diff
   set undofile  
 endif  
 
-"----------------YOUCOMPLETEME----------------
+"________________YouCompleteMe________________
 let g:ycm_key_list_select_completion = ['<C-J>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-K>', '<Up>']
-"----------------YOUCOMPLETEME----------------
+"________________YouCompleteMe________________
 
 "__________________MARKDOWN__________________
 "Turn on spell check in markdown files
@@ -152,13 +152,13 @@ let g:grammarous#disabled_rules = {
             \ }
 "_______________vim-grammarous_______________
 
-"-------------VIM JSX JAVASCRIPT-------------
+"_____________VIM JSX JAVASCRIPT_____________
 let g:jsx_ext_required = 0
-"-------------VIM JSX JAVASCRIPT-------------
+"_____________VIM JSX JAVASCRIPT_____________
 
-"------------------vim-lion------------------
+"__________________vim-lion__________________
 let g:lion_squeeze_spaces = 1
-"------------------vim-lion------------------
+"__________________vim-lion__________________
 
 "_________________Syntastic_________________
 ""Syntastic recommended settings
