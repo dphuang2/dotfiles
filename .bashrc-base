@@ -114,3 +114,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+set -o vi
+export LS_COLORS='ow=01;36;40'
