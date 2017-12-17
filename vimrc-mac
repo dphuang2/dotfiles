@@ -76,9 +76,9 @@ set hlsearch
 "Jump to search results as you type
 set incsearch                   
 
-"2-space tabs
-set softtabstop=2               
-set shiftwidth=2
+"4-space tabs
+set softtabstop=4               
+set shiftwidth=4
 set expandtab
 
 "auto indent
@@ -117,18 +117,20 @@ if !&diff
   set undofile  
 endif  
 
-"________________YouCompleteMe________________
+"----------------YOUCOMPLETEME----------------
 let g:ycm_key_list_select_completion = ['<C-J>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-K>', '<Up>']
-"________________YouCompleteMe________________
+"----------------YOUCOMPLETEME----------------
 
-"__________________MARKDOWN__________________
-"Turn on spell check in markdown files
+"__________________DOCUMENTS__________________
+"Turn on spell check in specific files
 autocmd FileType markdown :setlocal spell spelllang=en_us
+autocmd FileType text :setlocal spell spelllang=en_us
 
-"Set textwidth to 80 in markdown files
+"Set textwidth to 80 in specific files
 autocmd FileType markdown :setlocal textwidth=80
-"__________________MARKDOWN__________________
+autocmd FileType text :setlocal textwidth=80
+"__________________DOCUMENTS__________________
 
 "_______________vim-grammarous_______________
 let g:grammarous#hooks = {}
@@ -152,13 +154,13 @@ let g:grammarous#disabled_rules = {
             \ }
 "_______________vim-grammarous_______________
 
-"_____________VIM JSX JAVASCRIPT_____________
+"-------------VIM JSX JAVASCRIPT-------------
 let g:jsx_ext_required = 0
-"_____________VIM JSX JAVASCRIPT_____________
+"-------------VIM JSX JAVASCRIPT-------------
 
-"__________________vim-lion__________________
+"------------------vim-lion------------------
 let g:lion_squeeze_spaces = 1
-"__________________vim-lion__________________
+"------------------vim-lion------------------
 
 "_________________Syntastic_________________
 ""Syntastic recommended settings
