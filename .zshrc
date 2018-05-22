@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dylanhuang/.oh-my-zsh
+export ZSH=/Users/$USER/.oh-my-zsh
 
 if [ -f $HOME/.envvars ]; then
     . $HOME/.envvars
@@ -15,12 +15,11 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export TERM='xterm-256color' 
-export EDITOR='/usr/local/bin/mvim -v'
+export EDITOR='vim'
 
 alias cs225= '/Users/dylanhuang/Classes/cs225'
 alias ece391='cd /Users/dylanhuang/Classes/ece391/ece391_share/work/'
 alias final='cd /Users/dylanhuang/Dropbox/UIUC/Classes/Git/FPGA-Snake'
-alias vim='mvim -v'
 alias :q='exit'
 alias vrc='vim ~/.vimrc'
 alias ece385="cd /Users/dylanhuang/Dropbox/UIUC/Classes/ECE385"
