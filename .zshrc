@@ -9,9 +9,8 @@ fi
 
 ZSH_THEME="agnoster"
 
-plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
+source ~/.bash_profile
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export TERM='xterm-256color' 
@@ -36,3 +35,4 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
 set -o vi
+export PATH="/usr/local/sbin:$PATH"
