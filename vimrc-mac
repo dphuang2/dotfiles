@@ -93,7 +93,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-R> <C-W><C-R>
 
 "Open new split panes to right and bottom, which feels more natural than Vim’s default
 set splitbelow
