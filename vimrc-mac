@@ -6,7 +6,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'mxw/vim-jsx'
 Plugin 'The-NERD-tree'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -30,7 +30,7 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'zenburn'
-"Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
 "Plugin 'ruby-matchit'
 
 "All of your Plugins must be added before the following line
@@ -70,6 +70,19 @@ set backspace=2
 "For fast navigation
 set relativenumber
 set number
+
+" Damian Conway's Die Blinkënmatchen: highlight matches
+nnoremap <silent> n n:call HLNext(0.1)<cr>
+nnoremap <silent> N N:call HLNext(0.1)<cr>
+
+function! HLNext (blinktime)
+  let target_pat = '\c\%#'.@/
+  let ring = matchadd('ErrorMsg', target_pat, 101)
+  redraw
+  exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+  call matchdelete(ring)
+  redraw
+endfunction
 
 "Enable syntax highlighting
 syntax enable                   
@@ -139,21 +152,21 @@ autocmd FileType text :setlocal textwidth=80
 "__________________DOCUMENTS__________________
 
 "_______________vim-grammarous_______________
-"let g:grammarous#hooks = {}
-"function! g:grammarous#hooks.on_check(errs) abort
-    "nmap <buffer>gn <Plug>(grammarous-move-to-next-error)
-    "nmap <buffer>gp <Plug>(grammarous-move-to-previous-error)
-    "nmap <buffer>gr <Plug>(grammarous-move-to-info-window)r
-    "nmap <buffer>gf <Plug>(grammarous-move-to-info-window)f
-    "nmap <buffer>gR <Plug>(grammarous-move-to-info-window)R
-"endfunction
-"function! g:grammarous#hooks.on_reset(errs) abort
-    "nunmap <buffer>gn
-    "nunmap <buffer>gp
-    "nunmap <buffer>gr
-    "nunmap <buffer>gf
-    "nunmap <buffer>gR
-"endfunction
+let g:grammarous#hooks = {}
+function! g:grammarous#hooks.on_check(errs) abort
+    nmap <buffer>gn <Plug>(grammarous-move-to-next-error)
+    nmap <buffer>gp <Plug>(grammarous-move-to-previous-error)
+    nmap <buffer>gr <Plug>(grammarous-move-to-info-window)r
+    nmap <buffer>gf <Plug>(grammarous-move-to-info-window)f
+    nmap <buffer>gR <Plug>(grammarous-move-to-info-window)R
+endfunction
+function! g:grammarous#hooks.on_reset(errs) abort
+    nunmap <buffer>gn
+    nunmap <buffer>gp
+    nunmap <buffer>gr
+    nunmap <buffer>gf
+    nunmap <buffer>gR
+endfunction
 let g:grammarous#disabled_rules = {
             \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES'],
             \ 'help' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
@@ -174,14 +187,15 @@ let g:lion_squeeze_spaces = 1
 "------------------vim-lion------------------
 
 "_________________Syntastic_________________
-""Syntastic recommended settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+"Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_checkers = ['gcc']
 "let g:syntastic_scss_checkers = [ 'sass_lint' ] "Don't show warnings for include statements in scss files
 
 ""Don't show assigned but unsused variable error' in ruby
@@ -195,4 +209,8 @@ let g:lion_squeeze_spaces = 1
 ""Ignore eruby warnings
 "let g:syntastic_eruby_ruby_quiet_messages =
     "\ {'regex': 'possibly useless use of'}
-""_________________Syntastic_________________
+"_________________Syntastic_________________
+"------------------astyle------------------
+" This maps the f8 key to run astyle
+map <F8> :%!astyle -A4 <enter>
+"------------------astyle------------------
